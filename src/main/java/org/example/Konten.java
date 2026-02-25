@@ -5,6 +5,12 @@ public class Konten {
     private int saldo;
     private int kreditlinie;
 
+    public Konten(String kontonummer, int saldo, int kreditlinie) {
+        this.kontonummer = kontonummer;
+        this.saldo = saldo;
+        this.kreditlinie = kreditlinie;
+    }
+
     public String getKontonummer() {
         return kontonummer;
     }
@@ -19,15 +25,14 @@ public class Konten {
 
     public boolean abheben(int betrag) {
         if (betrag <= 0) {
-            System.out.println("Betrag muss positiv sein");
-            return false;
+            throw new IllegalArgumentException ("Betrag muss positiv sein");
         }
 
         if ((saldo - betrag) < -kreditlinie) {
             System.out.println("Kreditlinie überschritten");
             return false;
         }
-        saldo = saldo - betrag;
+        this.saldo = saldo - betrag;
 
         return true;
     }
@@ -38,7 +43,7 @@ public class Konten {
             return false;
         }
 
-        saldo = saldo + betrag;
+        this.saldo = saldo + betrag;
         return true;
     }
 }
