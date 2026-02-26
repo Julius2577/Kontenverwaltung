@@ -24,9 +24,5 @@ public class Main {
         System.out.println("Saldo Konto 1: " + konto1.getSaldo());
         System.out.println("Saldo Konto 2: " + konto2.getSaldo());
 
-
-
-
-
     }
 }
