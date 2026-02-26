@@ -1,14 +1,18 @@
 package org.example;
 
-public class Konten {
-    private String kontonummer;
+public class Konto {
+    private final String kontonummer;
     private int saldo;
-    private int kreditlinie;
+    private final int kreditlinie;
+    private final String name;
+    private final String adresse;
 
-    public Konten(String kontonummer, int saldo, int kreditlinie) {
+    public Konto(String kontonummer, int saldo, int kreditlinie, String name, String adresse) {
         this.kontonummer = kontonummer;
         this.saldo = saldo;
         this.kreditlinie = kreditlinie;
+        this.name = name;
+        this.adresse = adresse;
     }
 
     public String getKontonummer() {
@@ -21,6 +25,14 @@ public class Konten {
 
     public int getKreditlinie() {
         return kreditlinie;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAdresse() {
+        return adresse;
     }
 
     public boolean abheben(int betrag) {
@@ -46,6 +58,7 @@ public class Konten {
         this.saldo = saldo + betrag;
         return true;
     }
+
 }
 
 
