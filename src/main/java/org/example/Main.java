@@ -11,7 +11,7 @@ public class Main {
         bank.addKonto(konto1);
         bank.addKonto(konto2);
 
-        boolean erfolg = bank.überweisen("DE123456", "DE132456", 300);
+        boolean erfolg = bank.ueberweisen("DE123456", "DE132456", 300);
 
 
 

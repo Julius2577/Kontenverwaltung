@@ -35,13 +35,14 @@ public class Bank {
 
     public Konto findKontoBykontonummer(String kontonummer) {
         for (Konto k : alleKonten) {
-            if (k.getKontonummer().equals(kontonummer)){
+            if (k.getKontonummer().equals(kontonummer)) {
                 return k;
+            }
         }
         return null;
     }
 
-    public boolean überweisen(String vonNr, String zurNr, int betrag) {
+    public boolean ueberweisen(String vonNr, String zurNr, int betrag) {
         Konto von = findKontoBykontonummer(vonNr);
         Konto zu = findKontoBykontonummer(zurNr);
         if(von == null || zu == null ){
@@ -65,6 +66,7 @@ public class Bank {
 
     @Override // braucht man hier weil man Object.toString() (standartmethode von java) durch Bank.toString () ersetzen will. Jedes java projekt erbt automatische toString ()
     public String toString() {
-        return name + " " + bankleitzahl;
-    }
+            return name + " " + bankleitzahl;
+        }
 }
+
