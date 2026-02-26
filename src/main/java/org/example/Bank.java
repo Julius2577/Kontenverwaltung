@@ -6,9 +6,9 @@ import java.util.List;
 public class Bank {
     private final String name;
     private final String bankleitzahl;
-    public Bank(String name, String Bankleitzahl) {
+    public Bank(String name, String bankleitzahl) {
         this.name = name;
-        this.bankleitzahl = Bankleitzahl;
+        this.bankleitzahl = bankleitzahl;
     }
 
     public String getName() {
