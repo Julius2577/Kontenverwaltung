@@ -16,7 +16,4 @@ Es dient als reines Lern- und Übungsprojekt.
 - SonarQube for IDE (Codeanalyse)
 - Git & GitHub
 
-## Tests
-Für zentrale Logik wurden Unit-Tests mit JUnit geschrieben, um die
-Funktionalität und Korrektheit sicherzustellen.
 
